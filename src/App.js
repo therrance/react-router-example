@@ -4,17 +4,17 @@ import "./App.css";
 
 const Navigation = () => (
   <nav>
-    <Link to="/">Home</Link>
-    <Link to="/about">About</Link>
-    <Link to="/users">Users</Link>
-  </nav>
+  <Link to="/one">One</Link>
+  <Link to="/one/two">Two</Link>
+  <Link to="/one/two/three">Three</Link>
+</nav>
 );
 
-const Home = () => <h1>Home</h1>;
+const One = () => <h1>One</h1>;
 
-const About = () => <h1>About</h1>;
+const Two = () => <h1>Two</h1>;
 
-const Users = () => <h1>Users</h1>;
+const Three = () => <h1>Three</h1>;
 
 function App() {
   return (
@@ -22,9 +22,9 @@ function App() {
       <div className="container">
         <Navigation />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/users" element={<Users />} />
+          <Route path="/one" element={<One />} />
+          <Route path="/one/two" element={<Two />} />
+          <Route path="/one/two/three" element={<Three />} />
         </Routes>
       </div>
     </Router>
